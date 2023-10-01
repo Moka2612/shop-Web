@@ -12,6 +12,11 @@
     />
     <link
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+
+    <link
+      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
     />
     <link rel="stylesheet" href="./CSS/base.css" />
@@ -24,20 +29,119 @@
         <div class="grid">
           <nav class="navbar">
             <ul class="navbar-list">
-              <li class="navbar-item">Vào cửa hàng trên ứng dụng Name-shop</li>
-              <li class="navbar-item navbar-item--separate"></li>
-              <li class="navbar-item">Kết nối</li>
+              <li
+                class="navbar-item navbar-item--show-qr navbar-item--separate"
+              >
+                Vào cửa hàng trên ứng dụng Name-shop
+
+                <!-- Begin QRcode -->
+                <div class="header__qr">
+                  <img
+                    class="header__qr-img"
+                    src="./img/QRcode.png"
+                    alt="QRcode"
+                  />
+                  <div class="header__qr-apps">
+                    <a href="#" class="header__qr-link">
+                      <img
+                        class="header__qr-apps-img"
+                        src="./img/AppleStore.png"
+                        alt="AppleStore"
+                    /></a>
+                    <a href="#" class="header__qr-link">
+                      <img
+                        class="header__qr-apps-img"
+                        src="./img/GooglePlay.png"
+                        alt="GooglePlay"
+                    /></a>
+                  </div>
+                </div>
+                <!-- end QRcode -->
+              </li>
+              <li class="navbar-item">
+                <span class="navbar-title--default">Kết nối</span>
+                <a class="navbar-item-link-icon" href="#"
+                  ><i class="navbar-icon fa-brands fa-facebook"></i
+                ></a>
+
+                <a class="navbar-item-link-icon" href="#"
+                  ><i class="navbar-icon fa-brands fa-instagram"></i
+                ></a>
+              </li>
             </ul>
 
             <ul class="navbar-list">
-              <li class="navbar-item">
-                <a href="#" class="navbar-item-link">Thông Báo</a>
+              <li class="navbar-item navbar-item--show-notify">
+                <a href="#" class="navbar-item-link">
+                  <i class="navbar-icon fa-regular fa-bell"></i>Thông Báo</a
+                >
+                <!-- begin Notify -->
+                <div class="notify">
+                  <header class="notify-header">
+                    <h3>Thông báo mới nhận</h3>
+                  </header>
+                  <ul class="notify-list">
+                    <li class="notify-item">
+                      <a href="#" class="notify-link">
+                        <img
+                          src="https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-lgnisoguk7hvc1"
+                          alt=""
+                          class="notify-img"
+                        />
+                        <div class="notify-info">
+                          <p class="notify-title">Tên Sản Phẩm aaaaaaaaa</p>
+                          <p class="notify-description">
+                            Mô tả sản phẩm aaaaaaaaa
+                          </p>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="notify-item">
+                      <a href="#" class="notify-link">
+                        <img
+                          src="https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-lgnisoguk7hvc1"
+                          alt=""
+                          class="notify-img"
+                        />
+                        <div class="notify-info">
+                          <p class="notify-title">Tên Sản Phẩm aaaaaaaaa</p>
+                          <p class="notify-description">
+                            Mô tả sản phẩm aaaaaaaaa
+                          </p>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="notify-item">
+                      <a href="#" class="notify-link">
+                        <img
+                          src="https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-lgnisoguk7hvc1"
+                          alt=""
+                          class="notify-img"
+                        />
+                        <div class="notify-info">
+                          <p class="notify-title">Tên Sản Phẩm aaaaaaaaa</p>
+                          <p class="notify-description">
+                            Mô tả sản phẩm aaaaaaaaa
+                          </p>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                  <footer class="notify-footer">
+                    <a href="#" class="notify-footer--btn">Xem tất cả</a>
+                  </footer>
+                </div>
+                <!-- end Notify -->
               </li>
               <li class="navbar-item">
-                <a href="#" class="navbar-item-link">Trợ Giúp</a>
+                <a href="#" class="navbar-item-link"
+                  ><i class="navbar-icon fa-regular fa-circle-question"></i>Trợ
+                  Giúp</a
+                >
               </li>
-              <li class="navbar-item navbar-item--strong">Đăng Ký</li>
-              <li class="navbar-item navbar-item--separate"></li>
+              <li class="navbar-item navbar-item--strong navbar-item--separate">
+                Đăng Ký
+              </li>
               <li class="navbar-item navbar-item--strong">Đăng Nhập</li>
             </ul>
           </nav>

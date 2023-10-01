@@ -1,8 +1,10 @@
 .header {
   height: 120px;
   background-image: linear-gradient(40deg, var(--red-color), var(--red-color1));
+  padding: 1.5rem 0;
 }
 
+/* =========Navbar============ */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -11,6 +13,8 @@
 .navbar-list {
   list-style: none;
   padding-left: 0;
+  display: inline-flex;
+  justify-items: center;
 }
 
 .navbar-item,
@@ -24,18 +28,181 @@
 
 .navbar-item {
   margin: 0 0.8rem;
+  position: relative;
 }
 
-.navbar-item--separate {
-  margin: 0;
-  width: 0.1rem;
+.navbar-item--show-qr:hover .header__qr {
+  display: block;
+}
+
+.navbar-item--show-notify:hover .notify {
+  display: block;
+}
+
+.navbar-item--separate::after {
+  content: "";
+  display: block;
+  position: absolute;
   height: 1.4rem;
-  background-color: #ffffff96;
+  border-left: 1px solid rgb(255, 255, 255, 0.5);
+  right: -0.9rem;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .navbar-item--strong {
   font-weight: 500;
 }
 
-.navbar-item-link {
+.navbar-item:hover,
+.navbar-item-link:hover,
+.navbar-icon:hover {
+  color: rgb(255, 255, 255, 0.8);
+  cursor: pointer;
+}
+
+.navbar-item,
+.navbar-item-link,
+.navbar-item-link-icon {
+  text-decoration: none;
+  color: var(--white-color);
+  display: inline-flex;
+  align-items: center;
+}
+
+.navbar-icon {
+  font-size: 1.7rem;
+  margin: 0 0.4rem;
+}
+
+.navbar-title--default {
+  cursor: text;
+  color: var(--white-color);
+}
+
+/* ====== Header QR Code =====*/
+.header__qr {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 2rem;
+  background-color: var(--white-color);
+  width: 18rem;
+  animation: fadeIn ease-in 0.3s;
+  display: none;
+}
+
+.header__qr::before {
+  content: "";
+  position: absolute;
+  height: 2.5rem;
+  width: 100%;
+  top: -2rem;
+  display: block;
+}
+
+.header__qr-img {
+  width: 100%;
+}
+
+.header__qr-apps {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__qr-link:first-child {
+  margin-left: 1.2rem;
+}
+.header__qr-link:last-child {
+  margin-right: 1.2rem;
+}
+
+.header__qr-apps-img {
+  height: 1.7rem;
+}
+
+/* ============ Notify=============== */
+.notify {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 2rem;
+  background-color: var(--white-color);
+  width: 40rem;
+  border: 0.1rem solid #d3d3d3;
+  display: none;
+  animation: fadeIn ease-in 0.3s;
+}
+
+.notify::before {
+  content: "";
+  position: absolute;
+  height: 2.7rem;
+  width: 100%;
+  top: -2.3rem;
+  display: block;
+}
+
+.notify-header {
+  height: 4rem;
+  padding: 1rem 1.2rem;
+}
+
+.notify-header h3 {
+  color: #999;
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+
+.notify-list {
+}
+
+.notify-item {
+}
+
+.notify-link {
+  text-decoration: none;
+  display: flex;
+  padding: 1.2rem;
+  background-color: var(--red-color-rgba);
+}
+
+.notify-link:hover {
+  background-color: var(--red-color-rgba-hover);
+}
+
+.notify-img {
+  width: 5rem;
+  height: 5rem;
+}
+
+.notify-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding-left: 1.2rem;
+}
+
+.notify-title {
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: var(--black-color);
+}
+
+.notify-description {
+  font-size: 1.2rem;
+
+  color: #888;
+}
+
+.notify-footer {
+  display: flex;
+  justify-content: center;
+}
+.notify-footer--btn {
+  text-decoration: none;
+  padding: 1.2rem 0;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--black-color);
 }
